@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { Login, Role, WrongRole, Dashboard} from './pages';
+import {BrowserRouter,Routes, Route} from "react-router-dom"
 
 function App() {
+  const [auth, setAuth] = useState(false)
+  const [user, setUser] = useState({})
+  if(!auth) {
+    return <Login setAuth={setAuth} setUser={setUser}/>
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Role user={user} setAuth={setAuth}/>} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/wrong_role' element={<WrongRole />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

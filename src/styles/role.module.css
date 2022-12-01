@@ -1,0 +1,44 @@
+.container {
+  padding: 1em;
+}
+
+.container h2 {
+  color: #1488DB;
+}
+
+.container h2:last-child {
+  margin-top: 8em;
+  text-align: center;
+}
+
+.container h1 {
+  background-color: #1488DB;
+  color: white;
+  padding: 1.5em;
+  margin: 2em;
+  border-radius: 0.6em;
+  box-shadow: 5px 10px 10px #ccc;
+}
+
+.container button{
+  background-color: #1488dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  border-radius: 0.6em;
+  box-shadow: 2px 5px 5px #ccc;
+  font-size: 1.2em;
+}
+
+.button_list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.button_list button {
+  padding: 1em;
+  font-weight: bold;
+}

@@ -1,0 +1,12 @@
+{
+  "janitor": {
+    "username": "janitor@gmail.com",
+    "password": "janitor",
+    "type": "janitor"
+  },
+  "collector": {
+    "username": "collector@gmail.com",
+    "password": "collector",
+    "type": "collector"
+  }
+}

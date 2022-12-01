@@ -1,0 +1,31 @@
+.container {
+  padding: 1em;
+  text-align: center;
+}
+
+.message {
+  margin-top: 10em;
+}
+
+.container h1 {
+  margin: 0.2em;
+  color: #dd1414;
+  font-size: 2em;
+}
+
+.button_list {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.button_list button {
+  padding: 1em;
+  font-weight: bold;
+  color: white;
+  background-color: #1488dd;
+  border:none;
+  border-radius: 0.6em;
+  font-size: 1.2em;
+}

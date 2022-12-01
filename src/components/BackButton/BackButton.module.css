@@ -1,0 +1,16 @@
+.back_button{
+  background-color: #1488dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: white;
+  border-radius: 0.6em;
+  box-shadow: 2px 5px 5px #ccc;
+  font-size: 1.2em;
+}
+
+#back_button_icon {
+  width: 2em;
+  height: 2em;
+}

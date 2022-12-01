@@ -1,0 +1,16 @@
+{
+  "ve1": {
+    "name": "HINO 500",
+    "gas": "200",
+    "seats": "3",
+    "tonnage": "20000",
+    "kg": "16000"
+  },
+  "ve2": {
+    "name": "Thaco Towner 2",
+    "gas": "36",
+    "seats": "2",
+    "tonnage": "990",
+    "kg": "750"
+  }
+} 
