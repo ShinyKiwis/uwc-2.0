@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Login, Role, WrongRole, Dashboard} from './pages';
+import { Login, Role, WrongRole, Dashboard } from './pages';
 import {BrowserRouter,Routes, Route} from "react-router-dom"
 
 function App() {
