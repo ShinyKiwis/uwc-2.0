@@ -4,12 +4,13 @@ import {BsCheckCircleFill, BsMapFill, BsListUl, BsChatLeftFill, BsGearFill} from
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-  const [selected, setSelected] = useState("Check in/out")
+  const [selected, setSelected] = useState("")
   const NavbarItem = ({Icon, title, route}) => {
     const navigate = useNavigate()
     const redirect = () => {
       setSelected(title)
-      navigate(route)
+      console.log(route)
+      navigate("/dashboard" + route)
     }
     return (
     <div className={NavbarStyle.navbar_item} 
@@ -22,7 +23,8 @@ const Navbar = () => {
   const items = [
     {
       title: "Check in/out",
-      Icon: BsCheckCircleFill
+      Icon: BsCheckCircleFill,
+      route: '/attendance'
     },
     {
       title: "Map/MCP",
@@ -44,7 +46,7 @@ const Navbar = () => {
     <div className={NavbarStyle.navbar}>
       {
         items.map(item => (
-          <NavbarItem Icon={item.Icon} title={item.title} key={item.title}/>
+          <NavbarItem Icon={item.Icon} title={item.title} route={item.route} key={item.title}/>
         ))
       }
     </div>

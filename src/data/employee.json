@@ -1,10 +1,14 @@
 {
   "janitor": {
+    "id": "#j002",
+    "name": "John Doe",
     "username": "janitor@gmail.com",
     "password": "janitor",
     "type": "janitor"
   },
   "collector": {
+    "id": "c003",
+    "name": "Alex Doe",
     "username": "collector@gmail.com",
     "password": "collector",
     "type": "collector"
