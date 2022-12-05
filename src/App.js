@@ -3,6 +3,10 @@ import './App.css';
 import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat } from './pages';
 import {Navbar} from "./components"
 import {Routes, Route, useLocation} from "react-router-dom"
+import io from "socket.io-client"
+
+// The address of backend server
+const socket = io("http://localhost:4000")
 
 function App() {
   const {pathname} = useLocation()
@@ -17,6 +21,7 @@ function App() {
   if(!auth) {
     return <Login setAuth={setAuth} setUser={setUser}/>
   }
+  socket.emit('sendUsername', user.name)
   return (
     <div className="app">
         {(pathname !== '/' && pathname !== '/wrong_role') && <Navbar />}
@@ -32,7 +37,7 @@ function App() {
           />} />
           <Route path='/dashboard/tasks' element={<Tasks user={user} isChecked={isChecked}/>} />
           <Route path='/dashboard/settings' element={<Settings setAuth={setAuth} user={user}/>} />
-          <Route path='/dashboard/chat' element={<Chat user={user}/>} />
+          <Route path='/dashboard/chat' element={<Chat user={user} socket={socket}/>} />
         </Routes>
     </div>
   );
