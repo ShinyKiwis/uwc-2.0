@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Login, Role, WrongRole, Dashboard, CheckAttendance } from './pages';
+import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks } from './pages';
 import {Navbar} from "./components"
 import {Routes, Route, useLocation} from "react-router-dom"
 
@@ -24,6 +24,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/wrong_role' element={<WrongRole />} />
           <Route path='/dashboard/attendance' element={<CheckAttendance timer={timer} setTimer={setTimer} user={user}/>} />
+          <Route path='/dashboard/tasks' element={<Tasks user={user}/>} />
         </Routes>
     </div>
   );

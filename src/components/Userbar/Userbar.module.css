@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 1.1em;
+  color: #1481dd;
+}
+
+.search_container {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.search_container input {
+  border: none;
+  color: #1481dd;
+  font-weight: 600;
+  caret-color: black;
+}
+
+.search_container input:focus {
+  outline: none;
+}
+
+.user_container {
+  display: flex;
+  gap: 0.5em;
+  margin-left: auto;
+  align-items: center;
+  font-weight: bold;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user_container img {
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 0.6em;
+}

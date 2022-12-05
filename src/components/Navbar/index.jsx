@@ -32,7 +32,8 @@ const Navbar = () => {
     },
     {
       title: "Tasks",
-      Icon: BsListUl
+      Icon: BsListUl,
+      route: '/tasks'
     },
     {
       title: "Chat",
