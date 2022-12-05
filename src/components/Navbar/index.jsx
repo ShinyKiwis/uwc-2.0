@@ -41,7 +41,8 @@ const Navbar = () => {
     },
     {
       title: "Settings",
-      Icon: BsGearFill
+      Icon: BsGearFill,
+      route: '/settings'
     }]
   return (
     <div className={NavbarStyle.navbar}>

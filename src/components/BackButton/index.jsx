@@ -3,13 +3,13 @@ import {BiChevronLeft} from "react-icons/bi"
 import { useNavigate } from 'react-router-dom'
 import BackButtonStyle from "./BackButton.module.css"
 
-const BackButton = ({setAuth, route}) => {
+const BackButton = ({setState, route}) => {
   const navigate = useNavigate()
   const handleRedirect = () => {
     navigate(route)
   }
   return (
-    <button onClick={setAuth ? ()=>{setAuth(false)} : handleRedirect} 
+    <button onClick={setState ? ()=>{setState(false)} : handleRedirect} 
       className={BackButtonStyle.back_button}>
       <BiChevronLeft id={BackButtonStyle.back_button_icon}/>
     </button>
