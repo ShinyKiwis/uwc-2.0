@@ -13,6 +13,7 @@ function App() {
     min: 59,
     sec: 59
   })
+  const [isChecked, setIsChecked] = useState(false)
   if(!auth) {
     return <Login setAuth={setAuth} setUser={setUser}/>
   }
@@ -23,8 +24,13 @@ function App() {
           <Route path='/' element={<Role user={user} setAuth={setAuth}/>} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/wrong_role' element={<WrongRole />} />
-          <Route path='/dashboard/attendance' element={<CheckAttendance timer={timer} setTimer={setTimer} user={user}/>} />
-          <Route path='/dashboard/tasks' element={<Tasks user={user}/>} />
+          <Route path='/dashboard/attendance' element={<CheckAttendance 
+          timer={timer} 
+          setTimer={setTimer} 
+          user={user}
+          setIsChecked={setIsChecked}
+          />} />
+          <Route path='/dashboard/tasks' element={<Tasks user={user} isChecked={isChecked}/>} />
         </Routes>
     </div>
   );
