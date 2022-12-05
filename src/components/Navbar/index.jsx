@@ -37,7 +37,8 @@ const Navbar = () => {
     },
     {
       title: "Chat",
-      Icon: BsChatLeftFill
+      Icon: BsChatLeftFill,
+      route: '/chat'
     },
     {
       title: "Settings",

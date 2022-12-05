@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings } from './pages';
+import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat } from './pages';
 import {Navbar} from "./components"
 import {Routes, Route, useLocation} from "react-router-dom"
 
@@ -32,6 +32,7 @@ function App() {
           />} />
           <Route path='/dashboard/tasks' element={<Tasks user={user} isChecked={isChecked}/>} />
           <Route path='/dashboard/settings' element={<Settings setAuth={setAuth} user={user}/>} />
+          <Route path='/dashboard/chat' element={<Chat user={user}/>} />
         </Routes>
     </div>
   );
