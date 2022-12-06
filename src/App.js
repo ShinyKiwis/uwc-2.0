@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat } from './pages';
+import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat, Map } from './pages';
 import {Navbar} from "./components"
 import {Routes, Route, useLocation} from "react-router-dom"
 import io from "socket.io-client"
@@ -38,6 +38,7 @@ function App() {
           <Route path='/dashboard/tasks' element={<Tasks user={user} isChecked={isChecked}/>} />
           <Route path='/dashboard/settings' element={<Settings setAuth={setAuth} user={user}/>} />
           <Route path='/dashboard/chat' element={<Chat user={user} socket={socket}/>} />
+          <Route path='/dashboard/map' element={<Map />} />
         </Routes>
     </div>
   );

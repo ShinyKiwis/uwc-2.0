@@ -28,7 +28,8 @@ const Navbar = () => {
     },
     {
       title: "Map/MCP",
-      Icon: BsMapFill
+      Icon: BsMapFill,
+      route: '/map'
     },
     {
       title: "Tasks",
