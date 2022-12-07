@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   MapContainer,
   TileLayer,
   Marker,
-  Popup
+  Popup,
+  useMap
 } from "react-leaflet"
-import MapStyle from "../styles/map.module.css"
+import L from "leaflet"
 const center = [10.772093436939588, 106.6578857044717]
 
 const Map = () => {
+  const [destination ,setDestination] = useState([])
   const mcps = [
     {
       name: "MCP A",
@@ -35,6 +37,34 @@ const Map = () => {
       imgSrc: "https://tuongtac.thuathienhue.gov.vn/UploadFiles/PhanAnh/2019/06/582.jpg"
     }
   ]
+
+  const handleChangeRoute = (coordinate) => {
+    setDestination([...coordinate])
+  }
+
+
+  function Routing() {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!map) return;
+
+    const routingControl = L.Routing.control({
+      waypoints: [L.latLng(10.772093436939588, 106.6578857044717), L.latLng(destination[0], destination[1])],
+    lineOptions: {
+      styles: [{color: "#638aa7",weight: 4}]
+    },
+    routeWhileDragging: false,
+    addWaypoints: false,
+    draggableWaypoints: false,
+    }).addTo(map);
+
+    return () => map.removeControl(routingControl);
+  }, [map]);
+
+  return null;
+}
+
   return (
     <div>
       <MapContainer 
@@ -56,6 +86,7 @@ const Map = () => {
                 <li>{mcp.status}</li>
                 <li>{mcp.update}</li>
               </ul>
+              <button onClick={() => handleChangeRoute(mcp.coordinate)}>Guide</button>
             </Popup>
           </Marker>
         ))}
@@ -71,6 +102,7 @@ const Map = () => {
             <span>Back Khoa University of Technology</span>
           </Popup>
         </Marker>
+          <Routing />
       </MapContainer>
     </div>
   )

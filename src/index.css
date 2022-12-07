@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.leaflet-right {
+  color: #638aa7;
+}
+
+.leaflet-routing-container {
+  background-color: white;
+  padding: 1em;
+  border: 2px solid #638aa7 !important;
+  border-radius: 0.8em;
+}
