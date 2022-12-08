@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import NavbarStyle from "./Navbar.module.css"
 import {BsCheckCircleFill, BsMapFill, BsListUl, BsChatLeftFill, BsGearFill} from "react-icons/bs"
+import {RiTruckFill} from "react-icons/ri"
 import { useNavigate } from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = ({user}) => {
   const [selected, setSelected] = useState("")
   const NavbarItem = ({Icon, title, route}) => {
     const navigate = useNavigate()
@@ -20,7 +21,7 @@ const Navbar = () => {
       <span>{title}</span>
     </div>)
   }
-  const items = [
+  const janitor_items = [
     {
       title: "Check in/out",
       Icon: BsCheckCircleFill,
@@ -46,6 +47,34 @@ const Navbar = () => {
       Icon: BsGearFill,
       route: '/settings'
     }]
+  const collector_items = [
+    {
+      title: "Check in/out",
+      Icon: BsCheckCircleFill,
+      route: '/attendance'
+    },
+    {
+      title: "Vehicles",
+      Icon: RiTruckFill,
+      route: '/vehicles'
+    },
+    {
+      title: "Tasks",
+      Icon: BsListUl,
+      route: '/tasks'
+    },
+    {
+      title: "Chat",
+      Icon: BsChatLeftFill,
+      route: '/chat'
+    },
+    {
+      title: "Settings",
+      Icon: BsGearFill,
+      route: '/settings'
+    }
+  ]
+  const items = user.type === "janitor" ? janitor_items : collector_items
   return (
     <div className={NavbarStyle.navbar}>
       {

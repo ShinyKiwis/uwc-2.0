@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat, Map } from './pages';
+import { Login, Role, WrongRole, Dashboard, CheckAttendance, Tasks, Settings, Chat, Map, Vehicles } from './pages';
 import {Navbar} from "./components"
 import {Routes, Route, useLocation} from "react-router-dom"
 import io from "socket.io-client"
@@ -24,7 +24,7 @@ function App() {
   socket.emit('sendUsername', user.name)
   return (
     <div className="app">
-        {(pathname !== '/' && pathname !== '/wrong_role') && <Navbar />}
+        {(pathname !== '/' && pathname !== '/wrong_role') && <Navbar user={user}/>}
         <Routes>
           <Route path='/' element={<Role user={user} setAuth={setAuth}/>} />
           <Route path='/dashboard' element={<Dashboard />} />
@@ -39,6 +39,7 @@ function App() {
           <Route path='/dashboard/settings' element={<Settings setAuth={setAuth} user={user}/>} />
           <Route path='/dashboard/chat' element={<Chat user={user} socket={socket}/>} />
           <Route path='/dashboard/map' element={<Map />} />
+          <Route path='/dashboard/vehicles' element={<Vehicles />} />
         </Routes>
     </div>
   );

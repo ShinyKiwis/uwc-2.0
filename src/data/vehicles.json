@@ -4,13 +4,15 @@
     "gas": "200",
     "seats": "3",
     "tonnage": "20000",
-    "kg": "16000"
+    "kg": "16000",
+    "imgSrc": "https://caothanhdat.com/wp-content/uploads/2020/05/xe-cuon-ep-rac-9m3-hino-h7.jpg"
   },
   "ve2": {
     "name": "Thaco Towner 2",
     "gas": "36",
     "seats": "2",
     "tonnage": "990",
-    "kg": "750"
+    "kg": "750",
+    "imgSrc": "https://bizweb.dktcdn.net/100/282/437/files/xe-cho-rac-2-khoi-f554cfcf-3e5d-4d38-8dde-2ad6f6cf7a16.jpg?v=1620634650039"
   }
 } 

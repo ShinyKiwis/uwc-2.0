@@ -1,0 +1,54 @@
+.container {
+  height: 50%;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.container h1 {
+  color: #638aa7;
+}
+
+.container img {
+  width: 20em;
+  height: auto;
+}
+
+
+.vehicle_summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border: 2px solid #638aa7;
+  padding: 1em;
+  margin: 1em 2em;
+}
+
+.vehicle_summary div {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  color: #638aa7;
+  font-weight: bold;
+}
+
+.vehicle_summary img {
+  width: 3em;
+  height: auto;
+}
+
+.buttons {
+  margin: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button {
+  background-color: #638aa7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.8em;
+  padding: 0.8em 1em;
+  cursor: pointer;
+}
