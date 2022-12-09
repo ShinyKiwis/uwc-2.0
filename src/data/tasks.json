@@ -18,5 +18,25 @@
         "status": "Unfinished"
       }
     }
+  },
+  "#c003": {
+    "dailyTask": {
+      "#1001": {
+        "content": "Check in",
+        "status": "Unfinished"
+      },
+      "#1002": {
+        "content": "Collect at MCP A",
+        "status": "Unfinished"
+      },
+      "#1003": {
+        "content": "Update MCP A storage",
+        "status": "Unfinished"
+      },
+      "#1004": {
+        "content": "Check out",
+        "status": "Unfinished"
+      }
+    }
   }
 }
